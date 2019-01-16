@@ -1,0 +1,30 @@
+{
+  "name": "sudoku-app",
+  "version": "1.0.0",
+  "description": "Sudoku application by Andrey Kolobov",
+  "author": "Andrey Kolobov",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-header": "^2.0.5",
+    "gulp-less": "^3.5.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-svg-sprite": "1.3.7",
+    "gulp-uglify": "^3.0.1",
+    "jquery": "^3.3.1",
+    "jquery-form": "^4.2.2",
+    "jquery-maxlength": "^2.0.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery-validation": "^1.18.0",
+    "jquery-validation-unobtrusive": "^3.2.11",
+    "less": "^2.7.3",
+    "notifyjs-browser": "^0.4.2",
+    "rimraf": "^2.6.2"
+  }
+}

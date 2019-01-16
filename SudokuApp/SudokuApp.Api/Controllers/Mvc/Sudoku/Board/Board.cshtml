@@ -1,0 +1,55 @@
+﻿@using SudokuApp.Api.Controllers.Mvc.Sudoku
+@using SudokuApp.Common.Extensions
+@model SudokuApp.Api.Controllers.Mvc.Sudoku.Board.BoardViewModel
+
+@{
+    Layout = "~/Shared/Views/_Layout.cshtml";
+    ViewData["Title"] = "Игра";
+    
+    var disabled = !Model.IsAliveGame ? "disabled" : null;
+}
+
+@await Component.InvokeAsync("LoadScript", new
+{
+    page = this,
+    val = new
+    {
+        boardFilled = Model.BoardFilled,
+        boardFull = Model.BoardFull,
+        isAliveGame = Model.IsAliveGame,
+        boardId = Model.BoardId,
+        
+        urls = new
+        {
+            boardSave = Url.Action<SudokuController>(x => x.SaveBoardFilled(null)),
+            createNewBoard = Url.Action<SudokuController>(x => x.CreateNewBoard(null))
+        }
+    }
+})
+
+<div class="board">
+    <div class="container">
+        <div class="left-column">
+            <form asp-controller="Sudoku" asp-action="Board" method="post">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input name="UserName" type="text" class="form-control" asp-for="UserName" placeholder="Enter Name" value="@Model.UserName"/>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Подтвердить</button>
+            </form>
+        </div>
+        <div class="center-column">
+            <div id="container-table">
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="btn-group-vertical btn-group-lg">
+                <button id="js-board-newgame" type="button" class="btn btn-default" disabled="@disabled">Новая игра</button>
+                <button id="js-board-help" type="button" class="btn btn-default" disabled="@disabled">Подсказка</button>
+                <button id="js-board-chek" type="button" class="btn btn-default" disabled="@disabled">Проверить</button>
+                <button id="js-board-save" type="button" class="btn btn-default" disabled="@disabled">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>

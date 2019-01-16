@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuApp.Api", "SudokuApp.Api\SudokuApp.Api.csproj", "{7538F42B-0B60-4E4C-947A-A2CE386EF2C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuApp.Common", "SudokuApp.Common\SudokuApp.Common.csproj", "{84205825-2560-4B73-ACDF-D06BBCE75F89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuApp.Data", "SudokuApp.Data\SudokuApp.Data.csproj", "{A29DEF26-B0F9-4F3F-AF0C-B490B70B5627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuApp.DataAccess", "SudokuApp.DataAccess\SudokuApp.DataAccess.csproj", "{CB5DA292-D711-4733-826A-339B3A12F336}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuApp.DataAccess.Data", "SudokuApp.DataAccess.Data\SudokuApp.DataAccess.Data.csproj", "{F4A6ABA6-7ADA-4A2E-8950-730EEFA5C33B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuApp.Bl", "SudokuApp.Bl\SudokuApp.Bl.csproj", "{91B39D16-9579-42A8-B959-2874AD4E1BAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7538F42B-0B60-4E4C-947A-A2CE386EF2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7538F42B-0B60-4E4C-947A-A2CE386EF2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7538F42B-0B60-4E4C-947A-A2CE386EF2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7538F42B-0B60-4E4C-947A-A2CE386EF2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84205825-2560-4B73-ACDF-D06BBCE75F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84205825-2560-4B73-ACDF-D06BBCE75F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84205825-2560-4B73-ACDF-D06BBCE75F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84205825-2560-4B73-ACDF-D06BBCE75F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29DEF26-B0F9-4F3F-AF0C-B490B70B5627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29DEF26-B0F9-4F3F-AF0C-B490B70B5627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29DEF26-B0F9-4F3F-AF0C-B490B70B5627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29DEF26-B0F9-4F3F-AF0C-B490B70B5627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB5DA292-D711-4733-826A-339B3A12F336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB5DA292-D711-4733-826A-339B3A12F336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB5DA292-D711-4733-826A-339B3A12F336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB5DA292-D711-4733-826A-339B3A12F336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A6ABA6-7ADA-4A2E-8950-730EEFA5C33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A6ABA6-7ADA-4A2E-8950-730EEFA5C33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A6ABA6-7ADA-4A2E-8950-730EEFA5C33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A6ABA6-7ADA-4A2E-8950-730EEFA5C33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B39D16-9579-42A8-B959-2874AD4E1BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B39D16-9579-42A8-B959-2874AD4E1BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B39D16-9579-42A8-B959-2874AD4E1BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B39D16-9579-42A8-B959-2874AD4E1BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6626E85B-6987-4A77-941E-B7E3536EF045}
+	EndGlobalSection
+EndGlobal

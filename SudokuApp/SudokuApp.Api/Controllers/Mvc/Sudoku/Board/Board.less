@@ -1,0 +1,142 @@
+.board {
+  .container {
+    margin: auto;
+    display: flex;
+
+    .center-column {
+      width: 50%;
+      margin: 10px;
+      padding: 10px;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+
+      table {
+        border: 2px solid #000000;
+
+        td {
+          border: 1px solid #000000;
+          text-align: center;
+          vertical-align: middle;
+
+          input {
+            color: #000000;
+            padding: 0;
+            border: 0;
+            text-align: center;
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+            background-color: #FFFFFF;
+            outline: none;
+
+            &:disabled {
+              background-color: #EEEEEE;
+            }
+          }
+        }
+      }
+    }
+    
+    .left-column {
+      width: 30%;
+      margin: 10px;
+      padding: 10px;
+      height: auto;
+      background-color: lightgray;
+    }
+    
+    .right-column {
+      width: 20%;
+      margin: 10px;
+      padding: 10px;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .board {
+    .container {
+      .center-column {
+        width: 60%;
+        margin: 5px;
+        padding: 5px;
+
+        table {
+          border: 2px solid #000000;
+
+          td {
+            border: 1px solid #000000;
+            text-align: center;
+            vertical-align: middle;
+
+            input {
+              width: 40px;
+              height: 40px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .left-column {
+        width: 20%;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .right-column {
+        width: 20%;
+        margin: 5px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .board {
+    .container {
+      display: block;
+
+      .center-column {
+        width: 100%;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        
+        table {
+          border: 2px solid #000000;
+
+          td {
+            border: 1px solid #000000;
+            text-align: center;
+            vertical-align: middle;
+
+            input {
+              width: 40px;
+              height: 40px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .left-column {
+        width: 100%;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .right-column {
+        width: 100%;
+        margin: 5px;
+        padding: 5px;
+        display: block;
+      }
+    }
+  }
+}

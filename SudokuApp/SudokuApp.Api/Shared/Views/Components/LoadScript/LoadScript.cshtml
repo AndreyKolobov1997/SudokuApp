@@ -1,0 +1,23 @@
+﻿@using SudokuApp.Api.Shared.Views.Components.LoadScript
+
+@model LoadScriptModel
+
+@if (Model.Model != null)
+{
+    <div class="hidden script-data">
+        @Html.Raw(Json.Serialize(Model.Model))
+    </div>
+}
+
+
+@if (Model.IncludeScript)
+{
+    <environment names="Testing,Staging,Production">
+        <script src="@Model.ScriptSrc.Replace(".js", ".min.js")" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Development">
+        <script src="@Model.ScriptSrc" asp-append-version="true"></script>
+    </environment>
+}
+

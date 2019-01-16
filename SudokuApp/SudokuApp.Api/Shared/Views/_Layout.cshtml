@@ -1,0 +1,45 @@
+﻿@using Microsoft.Extensions.Options
+@using SudokuApp.Common.Configuration.Options
+
+@inject IOptions<ServiceNameOptions> ServiceNameOptions
+
+@{
+    var serviceName = ServiceNameOptions.Value.ServiceName + "/static";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - SudokuApp</title>
+    <environment include="Development">
+        <script src="~/@(serviceName)/js/lib/jquery.js" asp-append-version="true"></script>
+
+        <script src="~/@(serviceName)/js/lib/jquery.validate.js" asp-append-version="true"></script>
+
+        <script src="~/@(serviceName)/js/lib/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+
+        <script src="~/@(serviceName)/js/lib/jquery-ui.js" asp-append-version="true"></script>
+
+        <script src="~/@(serviceName)/js/Utils.js" asp-append-version="true"></script>
+
+        <script src="~/@(serviceName)/js/Shared/api.min.js" asp-append-version="true"></script>
+
+        <script src="~/@(serviceName)/js/Shared/share.min.js" asp-append-version="true"></script>
+
+        <link rel="stylesheet" type="text/css" href="~/@(serviceName)/css/styles.css" asp-append-version="true"/>
+        
+        <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true"/>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</head>
+<body>
+    @RenderBody()
+    <hr/>
+    <footer>
+        @{ await Html.RenderPartialAsync("Footer"); }
+    </footer>
+</body>
+</html>
