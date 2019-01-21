@@ -27,36 +27,36 @@ namespace SudokuApp.DataAccess.Repository
             int? take = null)
             where TEntity : class, IBaseEntity
         {
-            includeProperties = includeProperties ?? string.Empty; //инклюдит навигационные свойства
+            includeProperties = includeProperties ?? string.Empty;
             IQueryable<TEntity> query = _context.Set<TEntity>();
             if (filter != null)
             {
-                query = query.Where(filter); //применяет фильтр
+                query = query.Where(filter);
             }
 
-            if (!includeDeleted) //смотрит надо ли добавлять в выборку удалённые
+            if (!includeDeleted)
             {
                 query = query.Where(x => !x.DeletedDate.HasValue);
             }
 
 
-            foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, //инклюдит навигационные свойства
+            foreach (var includeProperty in includeProperties.Split(new char[] { ',' },
                 StringSplitOptions.RemoveEmptyEntries))
             {
                 query = query.Include(includeProperty);
             }
 
-            if (orderBy != null) //применяет сортировку если она есть
+            if (orderBy != null)
             {
                 query = orderBy(query);
             }
 
-            if (skip.HasValue) //применяет пропуски если они есть
+            if (skip.HasValue)
             {
                 query = query.Skip(skip.Value);
             }
 
-            if (take.HasValue) //отсекает заданное количество
+            if (take.HasValue)
             {
                 query = query.Take(take.Value);
             }
@@ -73,7 +73,7 @@ namespace SudokuApp.DataAccess.Repository
             int? take = null)
             where TEntity : class, IBaseEntity
         {
-            return PrepareQueryable(filter, includeDeleted, orderBy, includeProperties, skip, take).AsNoTracking(); //получает результат от PrepareQueryable и отключает их отслеживание с помощью AsNoTracking
+            return PrepareQueryable(filter, includeDeleted, orderBy, includeProperties, skip, take).AsNoTracking();
         }
 
         public virtual async Task<IEnumerable<TEntity>> GetAll<TEntity>(

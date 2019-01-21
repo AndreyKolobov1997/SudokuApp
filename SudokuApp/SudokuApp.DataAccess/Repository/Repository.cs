@@ -56,7 +56,7 @@ namespace SudokuApp.DataAccess.Repository
             entity.ModifiedDate = DateTime.UtcNow;
 
             var trackedEntity = _context.ChangeTracker.Entries<TEntity>().SingleOrDefault(e => e.Entity.Id.Equals(entity.Id));
-            //Не приаттачиваем сущность, если она уже отслеживается, просто ставим state modified.
+
             if (trackedEntity != null)
             {
                 trackedEntity.State = EntityState.Modified;
